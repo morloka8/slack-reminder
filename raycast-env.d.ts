@@ -16,7 +16,9 @@ declare namespace Preferences {
   /** Preferences accessible in the `add-slack-reminder` command */
   export type AddSlackReminder = ExtensionPreferences & {
   /** Developer Mode - Show developer-mode toasts and behaviors */
-  "devMode": boolean
+  "devMode": boolean,
+  /** Default Time (HH:MM) - Used if no time is provided in the picker */
+  "defaultTime": string
 }
 }
 

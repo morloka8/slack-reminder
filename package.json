@@ -23,6 +23,15 @@
           "title": "Developer Mode",
           "description": "Show developer-mode toasts and behaviors",
           "default": true
+        },
+        {
+          "name": "defaultTime",
+          "type": "textfield",
+          "required": false,
+          "title": "Default Time (HH:MM)",
+          "description": "Used if no time is provided in the picker",
+          "placeholder": "11:00",
+          "default": "11:00"
         }
       ]
     }
