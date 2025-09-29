@@ -62,6 +62,7 @@ export default function Command() {
       const script = `
       set d1 to 0.05 -- adjust this delay once
       set d2 to 0.1 -- adjust this delay once
+      set d3 to 0.3 -- adjust this delay once
       tell application "System Events"
         set frontName to name of first application process whose frontmost is true
       end tell
@@ -76,10 +77,10 @@ export default function Command() {
         if roleName is in {"AXTextArea", "AXTextField"} then set pressUpFirst to true
       end try
       tell application "System Events"
-        delay 0.3
+        delay d1
         if pressUpFirst then
           key code 126
-          delay d1
+          delay d2
         end if
         keystroke "m"
         delay d1
