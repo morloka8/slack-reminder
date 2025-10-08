@@ -38,7 +38,7 @@ function parseHHMM(time: string | undefined): { h: number; m: number } | undefin
 
 export default function Command() {
   const { devMode, defaultTime } = getPreferenceValues<{ devMode?: boolean; defaultTime?: string }>();
-  const isDev = Boolean(devMode) || ["1", "true", "TRUE", "True"].includes(String(process.env.DEV_MODE));
+  const isDev = devMode === true;
   const { handleSubmit, itemProps } = useForm<Values>({
     onSubmit: async (values) => {
       const selected = values.dateTime;

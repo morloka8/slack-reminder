@@ -22,7 +22,7 @@
           "required": false,
           "title": "Developer Mode",
           "description": "Show developer-mode toasts and behaviors",
-          "default": true
+          "default": false
         },
         {
           "name": "defaultTime",
