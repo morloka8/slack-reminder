@@ -93,13 +93,13 @@ export default function Command() {
         key code 48
         delay d1
         keystroke "${timeStr}"
-        delay d2
+        delay d1
         key code 48
-        delay d2
+        delay d3
         key code 48
-        delay d2
+        delay d1
         key code 48
-        delay d2
+        delay d1
         try
           keystroke return
         end try
@@ -112,7 +112,9 @@ export default function Command() {
           showToast({ title: "Skipped", message: "Slack not active" });
           return;
         }
-        showToast({ title: isDev ? "Keystrokes sent (Developer Mode)" : "Keystrokes sent" });
+        if (isDev) {
+          showToast({ title: "Keystrokes sent (Developer Mode)" });
+        }
       } catch (error) {
         showToast({ title: "Failed to send keystrokes", message: String(error) });
       } finally {
