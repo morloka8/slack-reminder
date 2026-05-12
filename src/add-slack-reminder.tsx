@@ -98,8 +98,6 @@ export default function Command() {
         delay d3
         key code 48
         delay d1
-        key code 48
-        delay d1
         try
           keystroke return
         end try
