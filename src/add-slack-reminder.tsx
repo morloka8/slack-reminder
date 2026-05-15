@@ -9,6 +9,10 @@ function getTomorrowAtEleven(): Date {
   const now = new Date();
   const tomorrow = new Date(now);
   tomorrow.setDate(tomorrow.getDate() + 1);
+  // Skip weekends: Saturday (6) -> +2 days, Sunday (0) -> +1 day, both land on Monday
+  const day = tomorrow.getDay();
+  if (day === 6) tomorrow.setDate(tomorrow.getDate() + 2);
+  else if (day === 0) tomorrow.setDate(tomorrow.getDate() + 1);
   tomorrow.setHours(11, 0, 0, 0);
   return tomorrow;
 }
